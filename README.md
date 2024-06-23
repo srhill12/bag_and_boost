@@ -27,7 +27,7 @@ The dataset consists of cartographic variables to predict forest cover type from
 
 ### 1. Data Import and Preparation
 
-```python
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
