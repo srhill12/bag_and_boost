@@ -4,7 +4,7 @@ This project aims to predict forest cover types using cartographic variables. Th
 
 ## Dataset: `covtype.csv`
 
-### Description
+## Description
 
 The dataset consists of cartographic variables to predict forest cover type from ecological processes rather than forest management practices.
 
@@ -25,7 +25,7 @@ The dataset consists of cartographic variables to predict forest cover type from
 
 ## Project Steps
 
-### 1. Data Import and Preparation
+## 1. Data Import and Preparation
 
 
 import pandas as pd
@@ -46,47 +46,47 @@ scaler = StandardScaler().fit(X_train)
 X_train_scaled = scaler.transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-### 2. Model Training and Evaluation
+## 2. Model Training and Evaluation
 # Extremely Random Trees Classifier
 from sklearn.ensemble import ExtraTreesClassifier
 
-# Train the ExtraTreesClassifier model
+## Train the ExtraTreesClassifier model
 clf = ExtraTreesClassifier(random_state=1).fit(X_train_scaled, y_train)
 
-# Evaluate the model
+## Evaluate the model
 print(f'Training Score: {clf.score(X_train_scaled, y_train)}')
 print(f'Testing Score: {clf.score(X_test_scaled, y_test)}')
 
 Training Score: 1.0
 Testing Score: 0.9012
 
-# Gradient Boosting Classifier
+## Gradient Boosting Classifier
 from sklearn.ensemble import GradientBoostingClassifier
 
-# Train the Gradient Boosting classifier
+## Train the Gradient Boosting classifier
 clf = GradientBoostingClassifier(random_state=1).fit(X_train_scaled, y_train)
 
-# Evaluate the model
+## Evaluate the model
 print(f'Training Score: {clf.score(X_train_scaled, y_train)}')
 print(f'Testing Score: {clf.score(X_test_scaled, y_test)}')
 
 Training Score: 0.7930
 Testing Score: 0.7919
 
-# Adaptive Boosting Classifier
+## Adaptive Boosting Classifier
 from sklearn.ensemble import AdaBoostClassifier
 
-# Train the AdaBoostClassifier
+## Train the AdaBoostClassifier
 clf = AdaBoostClassifier(random_state=1).fit(X_train_scaled, y_train)
 
-# Evaluate the model
+## Evaluate the model
 print(f'Training Score: {clf.score(X_train_scaled, y_train)}')
 print(f'Testing Score: {clf.score(X_test_scaled, y_test)}')
 
 Training Score: 0.7708
 Testing Score: 0.7711
 
-### Conclusion
+# Conclusion
 
 This project demonstrates the use of various ensemble learning techniques to predict forest cover types based on cartographic variables. The Extremely Random Trees Classifier achieved the highest accuracy on the test set, followed by the Gradient Boosting and Adaptive Boosting classifiers.
 
